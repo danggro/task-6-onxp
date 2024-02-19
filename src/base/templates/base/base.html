@@ -1,0 +1,35 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="django" />
+        <meta name="description" content="tutorial django" />
+        <link rel="stylesheet" href="style.css" />
+        {% tailwind_css %}
+        <title>
+            {% block title %}
+                My amazing site
+            {% endblock title %}
+        </title>
+    </head>
+    <body>
+        <div>
+            <h2>
+                {% block head_title %}
+                {% endblock head_title %}
+            </h2>
+        </div>
+        <div id="sidebar">
+            <p>Where you want to go?</p>
+            <ul>
+                {% block navigation %}
+                {% endblock navigation %}
+            </ul>
+        </div>
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

@@ -1,1 +1,15 @@
-This is blog template
+{% extends "base/base.html" %}
+{% block title %}
+    Blog Page
+{% endblock title %}
+{% block head_title %}
+    Blog
+{% endblock head_title %}
+{% block navigation %}
+    <li>
+        <a href="{% url 'landing' %}">Home</a>
+    </li>
+    <li>
+        <a href="{% url 'authentication' %}">Login</a>
+    </li>
+{% endblock navigation %}

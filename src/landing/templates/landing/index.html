@@ -1,1 +1,15 @@
-This is landing template
+{% extends "base/base.html" %}
+{% block title %}
+    Homepage
+{% endblock title %}
+{% block head_title %}
+    Homepage
+{% endblock head_title %}
+{% block navigation %}
+    <li>
+        <a href="{% url 'authentication' %}">Login</a>
+    </li>
+    <li>
+        <a href="{% url 'blog' %}">Blog</a>
+    </li>
+{% endblock navigation %}

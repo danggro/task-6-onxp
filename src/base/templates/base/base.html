@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,29 +6,32 @@
         <meta name="keywords" content="django" />
         <meta name="description" content="tutorial django" />
         <link rel="stylesheet" href="style.css" />
+        {% tailwind_css %}
         <title>
             {% block title %}
                 My amazing site
             {% endblock title %}
         </title>
     </head>
-    <body>
-        <div>
-            <h2>
-                {% block head_title %}
-                {% endblock head_title %}
-            </h2>
-        </div>
-        <div id="sidebar">
-            <p>Where you want to go?</p>
-            <ul>
-                {% block navigation %}
-                {% endblock navigation %}
-            </ul>
-        </div>
-        <div id="content">
-            {% block content %}
-            {% endblock content %}
+    <body class="flex items-center h-screen justify-center bg-slate-500">
+        <div class="bg-white p-10 rounded-xl shadow-2xl">
+            <div class="text-5xl">
+                <h2 class="mb-5 text-center">
+                    {% block head_title %}
+                    {% endblock head_title %}
+                </h2>
+            </div>
+            <div id="sidebar">
+                <p class="text-center">Where you want to go?</p>
+                <ul class="flex gap-5 justify-center my-3">
+                    {% block navigation %}
+                    {% endblock navigation %}
+                </ul>
+            </div>
+            <div id="content">
+                {% block content %}
+                {% endblock content %}
+            </div>
         </div>
     </body>
 </html>

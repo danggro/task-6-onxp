@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path("", include("landing.urls")),
     path("authentication/", include("authentication.urls")),
+    path("blog/", include("blog.urls")),
 ]

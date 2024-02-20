@@ -6,21 +6,19 @@
     Login
 {% endblock head_title %}
 {% block navigation %}
-    <li>
-        <a href="{% url 'landing' %}">Home</a>
-    </li>
-    <li>
-        <a href="{% url 'blog' %}">Blog</a>
-    </li>
+    {% include "components/nav_item.html" with page="landing" text="Home" %}
+    {% include "components/nav_item.html" with page="blog" text="Blog" %}
 {% endblock navigation %}
 {% block content %}
     <form>
-        <label for="#username">Username :</label>
-        <input id="username" name="username" type="text">
-        <br />
-        <label for="#password">Password :</label>
-        <input id="password" name="password" type="password">
-        <br />
+        <div>
+            <label for="#username">Username :</label>
+            <input id="username" name="username" type="text">
+        </div>
+        <div>
+            <label for="#password">Password :</label>
+            <input id="password" name="password" type="password">
+        </div>
         <button type="submit">Login</button>
     </form>
 {% endblock content %}

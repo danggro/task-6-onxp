@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +70,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
+
         },
     },
 ]

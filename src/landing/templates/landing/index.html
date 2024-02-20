@@ -6,10 +6,6 @@
     Homepage
 {% endblock head_title %}
 {% block navigation %}
-    <li>
-        <a href="{% url 'authentication' %}">Login</a>
-    </li>
-    <li>
-        <a href="{% url 'blog' %}">Blog</a>
-    </li>
+    {% include "components/nav_item.html" with page="authentication" text="Login" %}
+    {% include "components/nav_item.html" with page="blog" text="Blog" %}
 {% endblock navigation %}

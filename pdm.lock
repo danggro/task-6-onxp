@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:f195c56fc41095aa930ccbc751716450dc1c241e8976ec91a750220c8dba0ba9"
+content_hash = "sha256:bf47f9d2b2c0789cfb2f1ea6ac03b5e403900b0ed29d54e63b03aa2de684df25"
 
 [[package]]
 name = "asgiref"
@@ -80,6 +80,20 @@ dependencies = [
 files = [
     {file = "django-browser-reload-1.12.1.tar.gz", hash = "sha256:875b6bd01db13380522ccb4ae75871a2edeae74bb5ac92bf32eb76763d575d86"},
     {file = "django_browser_reload-1.12.1-py3-none-any.whl", hash = "sha256:08b457f1b6599bf782d4d2ecdfb0897d6fc936ac4035060d0269c2af5ef4ef7a"},
+]
+
+[[package]]
+name = "django-htmx"
+version = "1.17.2"
+requires_python = ">=3.8"
+summary = "Extensions for using Django with htmx."
+dependencies = [
+    "Django>=3.2",
+    "asgiref>=3.6",
+]
+files = [
+    {file = "django-htmx-1.17.2.tar.gz", hash = "sha256:4089f2ed38727e9846c2f4cd1daddf6b010c7be8d834cfbcffc8c5ecf445c04e"},
+    {file = "django_htmx-1.17.2-py3-none-any.whl", hash = "sha256:f4971432d2ca45dbb31d9b58add1c50ae54354afe4bf59cafd591b1711b502c0"},
 ]
 
 [[package]]

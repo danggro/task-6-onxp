@@ -9,3 +9,8 @@
     {% include "components/nav_item.html" with page="landing" text="Home" %}
     {% include "components/nav_item.html" with page="authentication" text="Login" %}
 {% endblock navigation %}
+{% block content %}
+    <ul>
+        {% for blog in blogs %}<li>{{ forloop.counter }}. {{ blog }}</li>{% endfor %}
+    </ul>
+{% endblock content %}

@@ -10,15 +10,15 @@
     {% include "components/nav_item.html" with page="blog" text="Blog" %}
 {% endblock navigation %}
 {% block content %}
-    <form>
+    <form class="*:flex *:flex-col flex flex-col gap-3 last:items-end">
         <div>
-            <label for="#username">Username :</label>
-            <input id="username" name="username" type="text">
+            <label for="username">Username :</label>
+            <input id="username" name="username" type="text" class="form-input">
         </div>
         <div>
-            <label for="#password">Password :</label>
-            <input id="password" name="password" type="password">
+            <label for="password">Password :</label>
+            <input id="password" name="password" type="password" class="form-input">
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" class="click-style">Login</button>
     </form>
 {% endblock content %}

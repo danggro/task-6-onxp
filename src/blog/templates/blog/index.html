@@ -10,7 +10,11 @@
     {% include "components/nav_item.html" with page="authentication" text="Login" %}
 {% endblock navigation %}
 {% block content %}
-    <ul>
-        {% for blog in blogs %}<li>{{ forloop.counter }}. {{ blog }}</li>{% endfor %}
+    <ul hx-trigger="load"
+        hx-get="/api/blogs"
+        hx-target="#blog-list"
+        hx-swap="outerHTML">
+        <div id="blog-list"></div>
     </ul>
+    {% comment %} <button class="click-style">Show</button> {% endcomment %}
 {% endblock content %}

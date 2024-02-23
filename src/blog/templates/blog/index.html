@@ -13,8 +13,8 @@
     <ul hx-trigger="load"
         hx-get="/api/blogs"
         hx-target="#blog-list"
-        hx-swap="outerHTML">
-        <div id="blog-list"></div>
+        hx-swap="afterbegin"
+        id="blog-list">
     </ul>
     {% comment %} <button class="click-style">Show</button> {% endcomment %}
 {% endblock content %}

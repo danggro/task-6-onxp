@@ -10,7 +10,10 @@
     {% include "components/nav_item.html" with page="blog" text="Blog" %}
 {% endblock navigation %}
 {% block content %}
-    <form class="*:flex *:flex-col flex flex-col gap-3 last:items-end">
+    <form class="*:flex *:flex-col flex flex-col gap-3 items-end"
+          hx-post="/api/login/"
+          hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+          hx-target="#result">
         <div>
             <label for="username">Username :</label>
             <input id="username" name="username" type="text" class="form-input">
@@ -21,4 +24,5 @@
         </div>
         <button type="submit" class="click-style">Login</button>
     </form>
+    <h1 id="result" hx-swap="outerHTML" class="text-4xl text-center"></h1>
 {% endblock content %}

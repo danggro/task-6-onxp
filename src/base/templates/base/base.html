@@ -8,6 +8,9 @@
         <meta name="description" content="tutorial django" />
         <link rel="stylesheet" href="style.css" />
         {% tailwind_css %}
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+              rel="stylesheet"
+              type="text/css" />
         <title>
             {% block title %}
                 My amazing site
@@ -25,7 +28,7 @@
             </div>
             <div id="nav">
                 <p class="text-center">Where you want to go?</p>
-                <ul class="flex gap-5 justify-center my-5">
+                <ul class="navbar flex gap-5 justify-center">
                     {% block navigation %}
                     {% endblock navigation %}
                 </ul>

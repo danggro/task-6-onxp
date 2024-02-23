@@ -16,13 +16,19 @@
           hx-target="#result">
         <div>
             <label for="username">Username :</label>
-            <input id="username" name="username" type="text" class="form-input">
+            <input id="username"
+                   name="username"
+                   type="text"
+                   class="input input-bordered">
         </div>
         <div>
             <label for="password">Password :</label>
-            <input id="password" name="password" type="password" class="form-input">
+            <input id="password"
+                   name="password"
+                   type="password"
+                   class="input input-bordered">
         </div>
-        <button type="submit" class="click-style">Login</button>
+        <button type="submit" class="btn btn-neutral">Login</button>
     </form>
     <h1 id="result" hx-swap="outerHTML" class="text-4xl text-center"></h1>
 {% endblock content %}
